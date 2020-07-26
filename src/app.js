@@ -10,7 +10,6 @@ app = express();
 
 // Node provided variables for getting absolute path of directory and filename
 console.log(__dirname)
-console.log(__filename)
             
 // node module: path.join used to start from an absolute path, and move relatively to it to my static assets
 console.log(path.join(__dirname, '../public/'))
@@ -30,7 +29,7 @@ app.get('/about', (req, res) => {
 // arg1 = route,
 // arg2 = Callback that is provided with req and res object (Object with info of http we recieve, object we use to send something http back)
 
-app.get('/weather', (req, res) => {
+app.get('/currentweather', (req, res) => {
 
     // ? To send back json that can be consumed by client
     // ?Automatically stringified by express
